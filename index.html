@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Tracker</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/128/10693/10693300.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white h-screen w-full scrollbar">
+    <nav class="bg-black w-full flex flex-row justify-start items-center">
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/10693/10693300.png"
+        alt=""
+        height="40px"
+        width="40px"
+        class="ml-2 mr-1"
+      />
+      <p class="text-[#D9D9D9] py-3 font-semibold text-2xl px-2">
+        Coin Tracker
+      </p>
+    </nav>
+    <div id="search-div" class="w-full my-4">
+      <form action="#" id="search-form" class="w-full">
+        <div class="flex flex-row flex-wrap justify-between items-center px-2">
+          <div class="w-full md:w-[50%] lg:w-[65%]">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search by name or symbol"
+              class="py-3 px-5 w-full rounded outline-none border-[1px] border-black bg-gray-800"
+            />
+          </div>
+          <div
+            class="flex flex-row justify-around items-center my-3 w-full md:w-[48%] lg:w-[33%]"
+          >
+            <div class="ml-2">
+              <input
+                type="button"
+                value="Sort By Mkt Cap"
+                id="mktCapSort"
+                class="py-3 px-5 w-fit bg-black text-white border border-white font-semibold cursor-pointer rounded"
+              />
+            </div>
+            <div class="ml-2">
+              <input
+                type="button"
+                value="Sort By Percentage"
+                id="percentageSort"
+                class="py-3 px-5 w-fit bg-black text-white border border-white font-semibold cursor-pointer rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="data-table" class="w-[100vh-16px] my-4">
+      <div class="overflow-x-auto px-2 scrollbar">
+        <table
+          class="table-auto w-full border-collapse border border-gray-900 text-center"
+        >
+          <thead class="bg-gray-900">
+            <tr>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Name</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Price</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Volume</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-min">
+                24H Change(%)
+              </th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">
+                Market Cap
+              </th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
